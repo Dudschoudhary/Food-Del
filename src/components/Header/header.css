@@ -4,6 +4,7 @@
     background: url('/header_img.png');
     background-size: contain;
     position: relative;
+    background-repeat: no-repeat;
 }
 .header-contant{
     animation: fadeIn 3s;
