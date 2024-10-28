@@ -5,10 +5,6 @@ import { StoreContext } from '../../context/StoreContext'
 const FoodItem = ({ id, name, price, description, image, category }) => {
 
   const {cartitem,addToCart, removeFromCart} = useContext(StoreContext)
-
-  console.log("id's" ,id);
-  console.log("cartitemsId's",cartitem)
-  
   
   return (
     <div className=' food-item w-[100%] m-auto rounded-2xl'>
@@ -30,7 +26,7 @@ const FoodItem = ({ id, name, price, description, image, category }) => {
           <img src={assets.rating_starts} alt="" className='w-[70px]' />
         </div>
         <p className='text-xs text-[#676767]'>{description}</p>
-        <p className='text-[22px] text-[#ff6347] font-medium my-2.5'>${price}</p>
+        <button  className='text-[22px] text-[#ff6347] font-medium my-2.5'>${price}</button>
       </div>
     </div>
   )

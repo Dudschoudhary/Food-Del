@@ -12,7 +12,7 @@ const PlaceOrder = () => {
           <input type="text"  className="mb-[15px] w-full p-2.5 border rounded outline-[#ff6347]"placeholder='First Name' />
           <input type="text"  className="mb-[15px] w-full p-2.5 border rounded outline-[#ff6347]"placeholder='Last Name' />
         </div>
-        <input type="email" placeholder='Email address' />
+        <input type="email" placeholder='Email address'className="mb-[15px] w-full p-2.5 border rounded outline-[#ff6347]"/>
         <input type="text" className="mb-[15px] w-full p-2.5 border rounded outline-[#ff6347]" placeholder='Street' />
         <div className='multi-fields flex gap-2.5'>
           <input type="text"  className="mb-[15px] w-full p-2.5 border rounded outline-[#ff6347]"placeholder='City' />
