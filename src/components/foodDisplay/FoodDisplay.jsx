@@ -5,6 +5,8 @@ import FoodItem from '../foodItem/FoodItem'
 const FoodDisplay = ({ category }) => {
 
   const { food_list } = useContext(StoreContext)
+
+  
   return (
     <div className='mt-[30px]'>
       <h2 className='text-[max(2vw,24px)] font-semibold'>Top dishes near you</h2>

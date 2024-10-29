@@ -8,6 +8,10 @@ const Cart = () => {
   console.log("remove data",removeFromCart);
   
 
+  const removeHandle = (itemId) =>{
+    removeFromCart(itemId)
+  }
+
   const navigate = useNavigate()
   return (
     <div className='cart mt-[100px]'>
@@ -26,13 +30,13 @@ const Cart = () => {
           if (cartitem[item._id] > 0) {
             return (
               <>
-                <div className='cart-items-title grid items-center text-[max(1vw,12px)] mt-2.5 text-black'>
+                <div className='cart-items-title grid items-center text-[max(1vw,12px)] mt-2.5 text-black' >
                   <img src={item.image} alt="" className='w-[50px] rounded' />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartitem[item._id]}</p>
                   <p>${item.price * cartitem[item._id]}</p>
-                  <button onClick={removeFromCart} className='cursor-pointer'>x</button>
+                  <button className='cursor-pointer'>x</button>
                 </div>
                 <hr className='h-[1px] ' />
               </>
@@ -55,11 +59,11 @@ const Cart = () => {
             </div>
             <hr className='my-2.5'/>
             <div className="cart-toalt-deatil flex justify-between text-[#555]">
-              <b>Toal</b>
+              <b>Total</b>
               <b>${getTotalCartAmount()=== 0?0 :getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button onClick={()=> navigate('/order')} className='border-none text-white bg-[#ff6347] w-[max(15vw,200px)] py-3 rounded cursor-pointer'>PROSRRD TO CHECKOUT</button>
+          <button onClick={()=> navigate('/order')} className='border-none text-white flex justify-center items-center w-full bg-[#ff6347] sm:w-[max(15vw,200px)] py-3 rounded cursor-pointer'>PROSRRD TO CHECKOUT</button>
         </div>
         <div className="cart-promocode flex-1 justify-start mt-6 md:mt-0">
           <div>

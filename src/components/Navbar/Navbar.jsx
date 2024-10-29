@@ -1,13 +1,15 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { assets } from '../../assets/assets';
-import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("home");
-    const { getTotalCartAmount, cartItems } = useContext(StoreContext);
+    const { getTotalCartAmount, cartitem } = useContext(StoreContext);
     const totalCartAmount = getTotalCartAmount();
+
+    // console.log(cartitem);
+    
 
     return (
         <div className="navbar flex py-10 justify-between items-center">
@@ -26,11 +28,11 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to='/cart'>
                         <img src={assets.basket_icon} alt="Cart" className='w-4 md:w-4 lg:w-5' />
                     </Link>
-                    {totalCartAmount > 0 && (
+                    
                         <div className="absolute min-h-[20px] min-w-[20px] bg-pink-700 -top-3 -right-3 rounded-full flex justify-center items-center text-white">
-                            {totalCartAmount}
+                        {/* {cartitem} */}
                         </div>
-                    )}
+                
                 </div>
                 <button onClick={() => setShowLogin(true)} className='border bg-transparent text-[#49557e] px-4 py-1 rounded-full cursor-pointer sm:text-[16px] hover:bg-[#fff4f2] transition-all md:px-5 md:py-1 md:text-lg lg:px-6 lg:py-2'>Sign In</button>
             </div>
