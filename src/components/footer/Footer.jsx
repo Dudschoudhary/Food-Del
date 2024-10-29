@@ -14,8 +14,8 @@ const Footer = () => {
                         <img src={assets.linkedin_icon} alt="" className='w-10 me-4' />
                     </div>
                 </div>
-                <div className='footer-content-center flex flex-col gap-5 sm:gap-2.5 items-start'>
-                    <h2 className='text-white sm:mt-4'>COMPANY</h2>
+                <div className='footer-content-center flex flex-col sm:gap-5 items-start'>
+                    <h2 className='text-white mt-6 gap-0'>COMPANY</h2>
                     <ul>
                         <li className='my-2.5 cursor-pointer'>Home</li>
                         <li className='my-2.5 cursor-pointer'>About us</li>
@@ -23,8 +23,8 @@ const Footer = () => {
                         <li className='my-2.5 cursor-pointer'>Privacy Policy</li>
                     </ul>
                 </div>
-                <div className='footer-content-right flex flex-col gap-5 items-start sm:gap-2.5 '>
-                    <h2 className='text-white'>GET IN TOUCH</h2>
+                <div className='footer-content-right flex flex-col sm:gap-5 items-start gap-0'>
+                    <h2 className='text-white mt-4'>GET IN TOUCH</h2>
                     <ul>
                         <li className='my-2.5 cursor-pointer'>info123@gmail.com</li>
                         <li className='my-2.5 cursor-pointer'>+123-3455-5656</li>

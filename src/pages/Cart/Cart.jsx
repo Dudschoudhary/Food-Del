@@ -32,11 +32,11 @@ const Cart = () => {
               <>
                 <div className='cart-items-title grid items-center text-[max(1vw,12px)] mt-2.5 text-black' >
                   <img src={item.image} alt="" className='w-[50px] rounded' />
-                  <p>{item.name}</p>
+                  <p className='ms-2'>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartitem[item._id]}</p>
                   <p>${item.price * cartitem[item._id]}</p>
-                  <button className='cursor-pointer'>x</button>
+                  <button className='cursor-pointer h-4 w-4 bg-red-600 flex justify-center items-center border-none text-white rounded'>x</button>
                 </div>
                 <hr className='h-[1px] ' />
               </>
