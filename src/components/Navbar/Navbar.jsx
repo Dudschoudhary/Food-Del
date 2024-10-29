@@ -8,8 +8,21 @@ const Navbar = ({ setShowLogin }) => {
     const { getTotalCartAmount, cartitem } = useContext(StoreContext);
     const totalCartAmount = getTotalCartAmount();
 
-    // console.log(cartitem);
-    
+    const [count, setCount] = useState(0)
+
+
+    const increment = () =>{
+        if(count <=1){
+            setCount(count +1)
+        }
+    }
+
+    const decrement = () =>{
+        if(count <=1){
+            setCount(count -1)
+        }
+    }
+    console.log("cartItems lenght",cartitem.length);
 
     return (
         <div className="navbar flex py-10 justify-between items-center">
@@ -17,7 +30,9 @@ const Navbar = ({ setShowLogin }) => {
                 <img src={assets.logo} alt="Logo" className="logo w-[80px] md:w-[120px] lg:w-[150px]" />
             </Link>
             <ul className="navbar-menu hidden gap-10 text-[#49557e] text-[18px] md:gap-3 md:text-[15px] md:flex lg:gap-5 lg:text-[17px]">
-                <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : "cursor-pointer"}>Home</li>
+                <li onClick={() =>  setMenu("home")} className={menu === "home" ? "active" : "cursor-pointer"}>Home
+                    <Link to='/home'></Link>
+                </li>
                 <li onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : "cursor-pointer"}>Menu</li>
                 <li onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : "cursor-pointer"}>Mobile-App</li>
                 <li onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : "cursor-pointer"}>Contact Us</li>
@@ -30,7 +45,7 @@ const Navbar = ({ setShowLogin }) => {
                     </Link>
                     
                         <div className="absolute min-h-[20px] min-w-[20px] bg-pink-700 -top-3 -right-3 rounded-full flex justify-center items-center text-white">
-                        {/* {cartitem} */}
+                        {2}
                         </div>
                 
                 </div>

@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext'
 const Cart = () => {
 
   const { cartitem, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext)
-  console.log("remove data",removeFromCart);
+  console.log("remove data",removeFromCart._id);
   
 
   const removeHandle = (itemId) =>{
@@ -36,7 +36,7 @@ const Cart = () => {
                   <p>${item.price}</p>
                   <p>{cartitem[item._id]}</p>
                   <p>${item.price * cartitem[item._id]}</p>
-                  <button className='cursor-pointer h-4 w-4 bg-red-600 flex justify-center items-center border-none text-white rounded'>x</button>
+                  <button onClick={() =>removeFromCart.itemId} className='cursor-pointer h-4 w-4 bg-red-600 flex justify-center items-center border-none text-white rounded'>x</button>
                 </div>
                 <hr className='h-[1px] ' />
               </>
